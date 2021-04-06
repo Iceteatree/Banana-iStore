@@ -3,7 +3,7 @@ const express = require('express');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 
-require('dotenv').config();
+// require('dotenv').config();
 require('isomorphic-fetch');
 
 // Initialising express with a variable name of app
@@ -47,6 +47,6 @@ if (process.env.NODE_ENV === 'production'){
 
 
 // Server is listening to environmental variables on hidden .env file.
-app.listen(process.env.PORT || 8001, process.env.HOST, () => {
+app.listen(process.env.PORT || 3001, process.env.HOST, () => {
     console.log(`Server running at http://${process.env.HOST}:${process.env.PORT}/`)
 });
