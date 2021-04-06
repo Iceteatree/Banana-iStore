@@ -19,15 +19,15 @@ app.use(helmet());
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'frontend/build')));
-  app.get('*',(req,res)=>
+  app.get('*',(req,res) =>
     {res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 });
 }
 
 // Testing to see if the server is online
-// app.get('/', (req, res) => {
-//     res.send("Server is working");
-// })
+app.get('/', (req, res) => {
+    res.send("Server is working");
+})
 
 // app.get('/', (req, res) => {
 //     res.sendFile(__dirname + "./frontend/public/index.html");
