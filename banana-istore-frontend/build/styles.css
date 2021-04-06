@@ -1,0 +1,136 @@
+/* Just some basic css to make things pretty */
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    text-align: center;
+    background-color: #f9f7f7;
+    height:100%;
+    font-family: 'Century Gothic','CenturyGothic','AppleGothic', sans-serif; 
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+hr {
+    color: #112d4e;
+    height: 32px;
+    border-width: 0 0 32px;
+    border-style: dotted;
+    width: 35vw;
+    margin-bottom: 10rem;
+}
+
+/* Header */
+
+.navbar {
+    font-family: Montserrat, sans-serif;
+    position:fixed;
+    /* I use z-index often within the css. It basically tells the html what can appear infront, and what can appear behind. The dedault z - index for all elements is 1. So applying a z-index 
+    of 3 allows it to appear at the front of the page. Z Index can only be used if you've changed the position from default to something else.*/
+    z-index: 3;
+    top: 0;
+    width: 100%;
+  }
+  
+  .fa-leaf {
+    color: #fff;
+    padding:0 0 0.2rem 1rem;
+  }
+  
+  .navbar-nav {
+    padding: 0.5rem;
+  }
+  
+  .list-group{
+      position: relative;
+  }
+
+  .nav-item a{
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* When you hover over the anchors within the nav item class the colour will change. */
+  .nav-item a:hover{
+    color:#3f72af;
+  }
+  
+
+/* Main */
+  main {
+    margin-top: 100px;
+  }
+
+  .front-logo {
+      padding-top: 20vh;
+      min-height: 100vh;
+  }
+
+  .search-form {
+      padding: 3rem;
+      background-color: #3f72af;
+  }
+
+.display-card-body {
+    width: 18rem;
+    display: inline-block;
+    border-radius: 18px;
+    border: black 7px solid;
+    margin: 1rem;
+    background-color: #f9f7f7;
+}
+
+.card-img {
+    width:150px;
+    padding:1rem 1rem 0rem 1rem;
+}
+
+.card-type {
+    text-transform: capitalize;
+    font-size: small;
+}
+
+.card-links {
+    text-decoration: none;
+    color:rgb(109, 109, 109);
+}
+
+.card-links:hover {
+    color: red;
+}
+
+.fav-items-div{
+    display:inline-block;
+    padding: 2rem;
+    margin: 5rem 3rem; 
+    background-color: #dbe2ef;
+    border: black dotted 8px;
+    border-radius: 50px;;
+}
+
+
+footer {
+    text-align: center;
+    margin:0 auto;
+    background-color:#dbe2ef;
+    padding: 3rem;
+}
+
+.button-clicked {
+    color:red;
+}
+
+/* Color Palette
+#f9f7f7
+#dbe2ef
+#3f72af
+#112d4e
+*/
