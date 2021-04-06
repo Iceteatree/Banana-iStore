@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node server.js",
-    "build": "cd client && npm install && npm run build",
+    "build": "cd banana-istore-frontend && npm install && npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix banana-istore-frontend && npm run build --prefix banana-istore-frontend"
   },
   "author": "Alan Kow",
