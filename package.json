@@ -4,14 +4,20 @@
   "description": "A simple React app that fetches from the Apple itunes API.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "start": "nodemon server.js"
   },
   "author": "Alan Kow",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
-    "nodemon": "^2.0.7"
+    "isomorphic-fetch": "^3.0.0",
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2",
+    "use-force-update": "^1.0.7"
   },
   "devDependencies": {
     "chai": "^4.3.4",
