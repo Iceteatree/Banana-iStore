@@ -18,9 +18,9 @@ app.use(helmet());
 // Express needs to serve up resources that have been built from React App.
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, './banana-istore-frontend/build')));
+  app.use(express.static(path.join(__dirname, 'frontend/build')));
   app.get('*',(req,res)=>
-    {res.sendFile(path.resolve(__dirname, './banana-istore-frontend', 'build', 'index.html'));
+    {res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 });
 }
 

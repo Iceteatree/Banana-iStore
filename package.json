@@ -7,10 +7,10 @@
     "test": "mocha",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "frontend": "npm start --prefix banana-istore-frontend",
+    "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "build": "cd banana-istore-frontend && npm install && npm run build",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix banana-istore-frontend && npm run build --prefix banana-istore-frontend"
+    "build": "cd frontend && npm install && npm run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Alan Kow",
   "license": "ISC",
