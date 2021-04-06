@@ -25,9 +25,15 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Testing to see if the server is online
+// app.get('/', (req, res) => {
+//     res.send("Server is working");
+// })
 app.get('/', (req, res) => {
-    res.send("Server is working");
+    res.sendFile(__dirname + "./frontend/public/index.html");
 })
+
+
+
 
 // Post request basically passing data from the frontend to the backend which then fetches the data from the API and then sends it back to the frontend
 app.post('/search', (req, res) => {
