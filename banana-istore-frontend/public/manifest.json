@@ -1,6 +1,6 @@
 {
   "short_name": "banana-istore",
-  "name": "banana-istore",
+  "name": "banana-istore-frontend",
   "icons": [
     {
       "src": "favicon.ico",
