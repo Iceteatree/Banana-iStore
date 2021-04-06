@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix banana-istore-frontend && npm run build --prefix banana-istore-frontend"
   },
   "author": "Alan Kow",
   "license": "ISC",
