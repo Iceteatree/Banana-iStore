@@ -47,7 +47,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-// Server is listening to environmental variables on hidden .env file.
-app.listen(process.env.PORT || 3001 () => {
-    console.log(`Server running on port ${process.env.PORT}`)
+// Server is listening to environmental variables.
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
