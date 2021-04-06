@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha",
     "start": "node server.js",
+    "server": "nodemon server.js",
+    "frontend": "npm start --prefix banana-istore-frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "build": "cd banana-istore-frontend && npm install && npm run build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix banana-istore-frontend && npm run build --prefix banana-istore-frontend"
   },
