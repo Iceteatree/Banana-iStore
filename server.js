@@ -39,12 +39,12 @@ app.post('/search', (req, res) => {
 
 // Express needs to serve up resources that have been built from React App.
 
-app.use(express.static(path.resolve(__dirname, 'banana-istore-frontend/build')));
-app.get('*',(req,res)=>
-  {res.sendFile(path.resolve(__dirname,
-  'banana-istore-frontend', 'build','index.html'));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static('banana-istore-frontend/build'));
+  app.get('*',(req,res)=>
+    {res.sendFile(path.resolve(__dirname,'banana-istore-frontend','build','index.html'));
 });
-
+}
 
 
 // Server is listening to environmental variables on hidden .env file.
