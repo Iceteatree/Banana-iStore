@@ -15,6 +15,15 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(helmet());
 
+// Express needs to serve up resources that have been built from React App.
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('banana-istore-frontend/build'));
+  app.get('*',(req,res)=>
+    {res.sendFile(path.resolve(__dirname, 'banana-istore-frontend', 'build', 'index.html'));
+});
+}
+
 // Testing to see if the server is online
 app.get('/', (req, res) => {
     res.send("Server is working");
@@ -36,16 +45,6 @@ app.post('/search', (req, res) => {
         res.send(err);
     });
 });
-
-// Express needs to serve up resources that have been built from React App.
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static('banana-istore-frontend/build'));
-  app.get('*',(req,res)=>
-    {res.sendFile(path.resolve(__dirname,'banana-istore-frontend','build','index.html'));
-});
-}
-
 
 // Server is listening to environmental variables.
 const PORT = process.env.PORT || 3001;
