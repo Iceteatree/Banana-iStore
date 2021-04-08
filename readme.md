@@ -10,8 +10,9 @@ A React and Express app that uses iTunes API to manipulate the frontend and back
 2. [Table of Contents](#table-of-contents)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [How to play](#how-to-play)
-6. [Credits](#credits)
+5. [Testing](#how-to-play)
+6. [Security](#security)
+7. [Credits](#credits)
 
 
 ## Installation

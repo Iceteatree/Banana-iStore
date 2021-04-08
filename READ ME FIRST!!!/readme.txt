@@ -16,6 +16,6 @@ If you don't believe me, just take a peak at my github deployment activity log h
 
 https://github.com/Iceteatree/Banana-iStore/deployments/activity_log?before=Y3Vyc29yOnYyOpK5MjAyMS0wNC0wNlQxMjozMjo0MSswMjowMM4UpzgT&environment=banana-istore
 
-Please let me know if you have figured out why my deployment isn't showing correctly. And if not I don't blame you. I'd rather restart the whole thing again and deploy from the beginning so that I know it atleast shows on the web but I don't have the time. :(
+Please let me know if you have figured out why my deployment isn't showing correctly. And if not I don't blame you. It's probably something really stupid that I've just glanced over. I'd like to restart the whole thing again and deploy from the beginning so that I know it atleast shows on the web but I don't have the time. Will probably be done post bootcamp though! 
 
 Anyways that's all for my rant

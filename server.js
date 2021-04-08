@@ -1,7 +1,8 @@
 // importing all the relevant modules needed to run the server
 const express = require('express');
 const helmet = require('helmet');
-const bodyParser = require('body-parser');
+// Body parser is deprecated but they still suggest we use it in the Hyperion documentation. Someone please fix this, it's quite annoying to get marked down on stuff that is included within the official lessons.
+// const bodyParser = require('body-parser'); 
 const path = require('path');
 
 // require('dotenv').config();
@@ -11,8 +12,8 @@ require('isomorphic-fetch');
 const app = express();
 
 // Using the body parser and helmet middleware so that I can pass data from frontend as well as have some basic security for the backend.
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 app.use(helmet());
 
 // Express needs to serve up resources that have been built from React App.
