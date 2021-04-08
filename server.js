@@ -17,11 +17,13 @@ app.use(express.json());
 app.use(helmet());
 
 app.use(
-    helmet({
-      contentSecurityPolicy: false,
+    helmet.contentSecurityPolicy({
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "script-src": ["'none'"],
+      },
     })
   );
-
 // Express needs to serve up resources that have been built from React App.
 
 if (process.env.NODE_ENV === 'production') {
