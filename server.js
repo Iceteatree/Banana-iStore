@@ -16,6 +16,12 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(helmet());
 
+app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    })
+  );
+
 // Express needs to serve up resources that have been built from React App.
 
 if (process.env.NODE_ENV === 'production') {
@@ -29,10 +35,6 @@ if (process.env.NODE_ENV === 'production') {
 app.get('/', (req, res) => {
     res.send("Server is working");
 })
-
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + "./frontend/public/index.html");
-// })
 
 
 // Post request basically passing data from the frontend to the backend which then fetches the data from the API and then sends it back to the frontend
